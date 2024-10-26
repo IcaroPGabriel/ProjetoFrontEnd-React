@@ -2,8 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Checkbox } from 'primereact/checkbox';
-import FilterGroup from './componentes/FilterGroup';
+import FilterGroup from './componentes/FilterGroup'
+
+
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
       <h1>Testando as bibliotecas do react</h1>
       <article>
         <h2>Realizando testes</h2>
+        <FilterGroup/>
         
-
         
       </article>
     </>
