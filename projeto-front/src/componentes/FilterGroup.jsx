@@ -1,44 +1,41 @@
 import React, { useState } from "react";
 import { Checkbox } from "primereact/checkbox";
+import { primeflex } from "/node_modules/primeflex/primeflex.css";
 
- function FilterGroup() {
-    const categories = [
-        { name: 'Nike', key: 'N' },
-        { name: 'Adidas', key: 'A' },
-        { name: 'Puma', key: 'P' },
-        { name: 'Umbro', key: 'U' }
-    ];
-    const [selectedCategories, setSelectedCategories] = useState([categories[1]]);
+function FilterGroup() {
+    let categorias = [
+        {nome:'Adidas', key:'A1' },
+        {nome: 'Balenciaga', key:'C2'},
+        {nome:'K-Swiss', key:'K3'},
+        {nome:'Nike', key:'N4'},
+        {nome:'Puma', key:'P5'}
+    ]
+    let [selCategorias, setSelCategorias] = useState([categorias[0]]);
+
+    function escolherCategoria(x) {
+        let _selCategorias = [...selCategorias]
+
+        if (x.checked) {
+            _selCategorias.push(x.value);
+        } else {
+            _selCategorias = _selCategorias.filter(categoria => categoria.key !== x.value.key);
+            setSelCategorias(_selCategorias);
+        }
+    }
 
 
-    const onCategoryChange = (e) => {
-        let _selectedCategories = [...selectedCategories];
 
-        if (e.checked)
-            _selectedCategories.push(e.value);
-        else
-            _selectedCategories = _selectedCategories.filter(category => category.key !== e.value.key);
+    return ( 
+        <>
+        <article className="card d-flex justify-content-center">
+            <section className="d-flex-colunm">
+                <div>
 
-        setSelectedCategories(_selectedCategories);
-    };
-
-    return (
-        <div className="card flex justify-content-center">
-            <div className="flex flex-column gap-3">
-            {categories.map((category) => {
-            return (
-                <div key={category.key} className="flex align-items-center">
-                    <Checkbox inputId={category.key} name="category" value={category} onChange={onCategoryChange} checked={selectedCategories.some((item) => item.key === category.key)} />
-                    <label htmlFor={category.key} className="ml-2">
-                    {category.name}
-                    </label>
                 </div>
-                    );
-                })}
-            </div>
-        </div>
-    )
+            </section>
+        </article>
+        </>
+     );
 }
-        
-        
-   export default FilterGroup;
+
+export default FilterGroup;
