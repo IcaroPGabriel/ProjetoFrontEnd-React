@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import FilterGroup from './componentes/FilterGroup'
 import TesteCaixa from './componentes/Teste'
+import CheckboxForm from './componentes/CheckboxForm'
 
 
 
@@ -21,7 +22,9 @@ function App() {
       <article>
         <h2>Realizando testes</h2>
         <FilterGroup/>
-        <TesteCaixa/>
+        <div>
+          <CheckboxForm/>
+        </div>
         
       </article>
     </>

@@ -2,34 +2,42 @@ import React, { useState } from "react";
 import { Checkbox } from "primereact/checkbox";
 
 function TesteCaixa() {
-    
-const [cities, setCities] = useState([]);
 
-const onCityChange = (e) => {
-    let selectedCities = [...cities];
-    if(e.checked)
-        selectedCities.push(e.value);
-    else
-        selectedCities.splice(selectedCities.indexOf(e.value), 1);
+    const categories = [
+        { name: 'Accounting', key: 'A' },
+        { name: 'Marketing', key: 'M' },
+        { name: 'Production', key: 'P' },
+        { name: 'Research', key: 'R' }
+    ];
+    const [selectedCategories, setSelectedCategories] = useState([categories[1]]);
 
-    setCities(selectedCities);
+    const onCategoryChange = (e) => {
+        let _selectedCategories = [...selectedCategories];
+
+        if (e.checked)
+            _selectedCategories.push(e.value);
+        else
+            _selectedCategories = _selectedCategories.filter(category => category.key !== e.value.key);
+
+        setSelectedCategories(_selectedCategories);
+    };
+
+    return (
+        <div className="card flex justify-content-center">
+            <div className="flex flex-column gap-3">
+                {categories.map((category) => {
+                    return (
+                        <div key={category.key} className="flex align-items-center">
+                            <Checkbox inputId={category.key} name="category" value={category} onChange={onCategoryChange} checked={selectedCategories.some((item) => item.key === category.key)} />
+                            <label htmlFor={category.key} className="ml-2">
+                                {category.name}
+                            </label>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    )
 }
-
-return(
-    <>
-    <div className="col-12">
-    <Checkbox inputId="cb1" value="New York" onChange={onCityChange} checked={cities.includes('New York')}></Checkbox>
-    <label htmlFor="cb1" className="p-checkbox-label">New York</label>
-</div>
-<div className="col-12">
-    <Checkbox inputId="cb2" value="San Francisco" onChange={onCityChange} checked={cities.includes('San Francisco')}></Checkbox>
-    <label htmlFor="cb2" className="p-checkbox-label">San Francisco</label>
-</div>
-<div className="col-12">
-    <Checkbox inputId="cb3" value="Los Angeles" onChange={onCityChange} checked={cities.includes('Los Angeles')}></Checkbox>
-    <label htmlFor="cb3" className="p-checkbox-label">Los Angeles</label>
-</div>
-    </>
-)
-}
+        
 export default TesteCaixa;
