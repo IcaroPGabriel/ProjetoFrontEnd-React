@@ -6,6 +6,16 @@ function FilterGroup() {
     
     const [marcado,SetMarcado] = useState(false);
 
+    function Marcar(props) {
+        
+        let {name, checked} = props.target
+
+        SetMarcado({
+            name == !false ? checked: marcado.name
+        })
+
+    }
+
     
     
     return ( 
@@ -15,7 +25,7 @@ function FilterGroup() {
         <article>
             <h3>Marcas</h3>
             <section className="marca">
-                <input type="checkbox" name="adidas" id="adidas" checked={marcado.adidas} />
+                <input type="checkbox" name="adidas" id="adidas" checked={marcado} onChange={Marcar} />
                 <label htmlFor="">adidas</label>
                 <br />
                 <input type="checkbox" name="nike" id="nike" />
