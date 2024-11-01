@@ -4,26 +4,32 @@ import { Checkbox } from "primereact/checkbox";
 
 function FilterGroup() {
 
-    // const marcas = [
-    //     {name:'Adidas', value:'A'},
-    //     {name:'Nike', value:'N'},
-    //     {name:'Puma', value:'P'},
-    //     {name:'K-Swiss',value:'K'},
-    //     {name:'Calenciaga', value:'C'}]
+    
 
-    // const [marcado,SetMarcado] = useState(false);
+     const [marcado,SetMarcado] = useState({
+        adidas: false,
+        nike: false,
+        puma:false,
+        kswiss: false,
+        calenciaga: false
 
-    // function Verificado(props) {
+    });
+
+     
+
+    
+    function Verificado(props) {
         
-    //     let {name, checked} = props.target
-
-    //     SetMarcado({
-            
-    //     })
-
-    //     console.log(name);
+        const {name, checked} = props.target
         
-    // }
+
+        SetMarcado({
+           adidas:name === "marca" ? checked : marcado.adidas
+        })
+
+    
+        
+    }
 
     
     
@@ -33,32 +39,35 @@ function FilterGroup() {
         <hr />
         <article>
             <h3>Marcas</h3>
-            <section className="marca">
-                <input type="checkbox" name="marca" id="adidas" />
-                <label htmlFor="">adidas</label>
+            <section className="marcas">
+                <input type="checkbox" name="marca" id="adidas" checked={marcado.adidas} onChange={Verificado} />
+                <label htmlFor="adidas">Adidas</label>
                 <br />
-                <input type="checkbox" name="marca" id="nike" />
-                <label htmlFor="">nike</label>
+                <input type="checkbox" name="marca" id="nike" checked={marcado.nike} onChange={Verificado} />
+                <label htmlFor="nike">Nike</label>
                 <br />
-                <input type="checkbox" name="marca" id="puma" />
-                <label htmlFor="">puma</label>
+                <input type="checkbox" name="marca" id="puma" checked={marcado.puma} onChange={Verificado} />
+                <label htmlFor="puma">Puma</label>
                 <br />
-                <input type="checkbox" name="marca" id="umbro" />
-                <label htmlFor="">umbro</label>
+                <input type="checkbox" name="marca" id="kswiss" checked={marcado.kswiss} onChange={Verificado} />
+                <label htmlFor="kswiss">K-Swiss</label>
+                <br />
+                <input type="checkbox" name="marca" id="calenciaga" checked={marcado.calenciaga} onChange={Verificado} />
+                <label htmlFor="calenciaga">Calenciaga</label>
             </section>
             <h3>Categorias</h3>
             <section className="categoria">
-                <input type="checkbox" name="categoria" id="esporte-lazer" />
-                <label htmlFor="">esporte e lazer</label>
+                <input type="checkbox" name="categoria" id="esporte" />
+                <label htmlFor="esporte">esporte e lazer</label>
                 <br />
                 <input type="checkbox" name="categoria" id="casual" />
-                <label htmlFor="">casual</label>
+                <label htmlFor="casual">casual</label>
                 <br />
                 <input type="checkbox" name="categoria" id="utilitario" />
-                <label htmlFor="">utilitario</label>
+                <label htmlFor="utilitario">utilitario</label>
                 <br />
                 <input type="checkbox" name="categoria" id="corrida" />
-                <label htmlFor="">corrida</label>
+                <label htmlFor="corrida">corrida</label>
             </section>
             <h3>Gênero</h3>
             <section className="genero">
@@ -74,10 +83,10 @@ function FilterGroup() {
             <section className="condicao">
                 <h3>Estado</h3>
                 <input type="radio" name="condicao" id="novo" />
-                <label htmlFor="">novo</label>
+                <label htmlFor="novo">novo</label>
                 <br />
                 <input type="radio" name="condicao" id="usado" />
-                <label htmlFor="">usado</label>
+                <label htmlFor="usado">usado</label>
             </section>
         </article>
         </>
