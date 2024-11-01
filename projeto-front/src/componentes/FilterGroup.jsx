@@ -3,17 +3,26 @@ import { Checkbox } from "primereact/checkbox";
 
 
 function FilterGroup() {
-    
+
+    const marcas = [
+        {name:'Adidas', value:'A'},
+        {name:'Nike', value:'N'},
+        {name:'Puma', value:'P'},
+        {name:'K-Swiss',value:'K'},
+        {name:'Calenciaga', value:'C'}]
+
     const [marcado,SetMarcado] = useState(false);
 
-    function Marcar(props) {
+    function Verificado(props) {
         
         let {name, checked} = props.target
 
         SetMarcado({
-            name == !false ? checked: marcado.name
+            
         })
 
+        console.log(name);
+        
     }
 
     
@@ -25,16 +34,16 @@ function FilterGroup() {
         <article>
             <h3>Marcas</h3>
             <section className="marca">
-                <input type="checkbox" name="adidas" id="adidas" checked={marcado} onChange={Marcar} />
+                <input type="checkbox" name="A" id="adidas" checked={marcado} onChange={Verificado} />
                 <label htmlFor="">adidas</label>
                 <br />
-                <input type="checkbox" name="nike" id="nike" />
+                <input type="checkbox" name="N" id="nike" />
                 <label htmlFor="">nike</label>
                 <br />
-                <input type="checkbox" name="puma" id="puma" />
+                <input type="checkbox" name="P" id="puma" />
                 <label htmlFor="">puma</label>
                 <br />
-                <input type="checkbox" name="umbro" id="umbro" />
+                <input type="checkbox" name="U" id="umbro" />
                 <label htmlFor="">umbro</label>
             </section>
             <h3>Categorias</h3>
