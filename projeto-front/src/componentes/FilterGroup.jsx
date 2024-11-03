@@ -4,15 +4,32 @@ import { Checkbox } from "primereact/checkbox";
 
 function FilterGroup() {
 
+    let marcas = [
+        { name: 'Adidas', key: 'A' },
+        { name: 'Nike', key: 'N' },
+        { name: 'Puma', key: 'P' },
+        { name: 'K-Swiss', key: 'K' },
+        { name: 'Calenciaga', key: 'C' }]
+
+    let categorias = [
+        {nome:'Esporte e Lazer'},
+        {nome:'Casual'},
+        {nome:'Utilitário'},
+        {nome:'Corrida'}]
+
+    let genero = [
+        {valor:'Masculino'},
+        {valor:'Feminino'},
+        {valor:'Unissex'}]
+
+    let condicao = [
+        {estado:'Novo'},
+        {estado:'Usado'}]
+
     
 
      const [marcado,SetMarcado] = useState({
-        adidas: false,
-        nike: false,
-        puma:false,
-        kswiss: false,
-        calenciaga: false
-
+        element: false,
     });
 
      
@@ -24,10 +41,11 @@ function FilterGroup() {
         
 
         SetMarcado({
-           adidas:name === "marca" ? checked : marcado.adidas
+            element:name === "adidas" ? checked : marcado.element
         })
 
-    
+        console.log(name);
+        
         
     }
 
@@ -40,53 +58,53 @@ function FilterGroup() {
         <article>
             <h3>Marcas</h3>
             <section className="marcas">
-                <input type="checkbox" name="marca" id="adidas" checked={marcado.adidas} onChange={Verificado} />
-                <label htmlFor="adidas">Adidas</label>
+                <input type="checkbox" name="adidas" id="adidas" checked={marcado.adidas} onChange={Verificado} />
+                <label htmlFor="adidas">{marcas[0].name}</label>
                 <br />
-                <input type="checkbox" name="marca" id="nike" checked={marcado.nike} onChange={Verificado} />
-                <label htmlFor="nike">Nike</label>
+                <input type="checkbox" name="nike" id="nike" checked={marcado.nike} onChange={Verificado} />
+                <label htmlFor="nike">{marcas[1].name}</label>
                 <br />
-                <input type="checkbox" name="marca" id="puma" checked={marcado.puma} onChange={Verificado} />
-                <label htmlFor="puma">Puma</label>
+                <input type="checkbox" name="puma" id="puma" checked={marcado.puma} onChange={Verificado} />
+                <label htmlFor="puma">{marcas[2].name}</label>
                 <br />
-                <input type="checkbox" name="marca" id="kswiss" checked={marcado.kswiss} onChange={Verificado} />
-                <label htmlFor="kswiss">K-Swiss</label>
+                <input type="checkbox" name="kswiss" id="kswiss" checked={marcado.kswiss} onChange={Verificado} />
+                <label htmlFor="kswiss">{marcas[3].name}</label>
                 <br />
-                <input type="checkbox" name="marca" id="calenciaga" checked={marcado.calenciaga} onChange={Verificado} />
-                <label htmlFor="calenciaga">Calenciaga</label>
+                <input type="checkbox" name="calenciaga" id="calenciaga" checked={marcado.calenciaga} onChange={Verificado} />
+                <label htmlFor="calenciaga">{marcas[4].name}</label>
             </section>
             <h3>Categorias</h3>
             <section className="categoria">
-                <input type="checkbox" name="categoria" id="esporte" />
-                <label htmlFor="esporte">esporte e lazer</label>
+                <input type="checkbox" name="esporte" id="esporte" checked={marcado.esporte} onChange={Verificado} />
+                <label htmlFor="esporte">{categorias[0].nome}</label>
                 <br />
-                <input type="checkbox" name="categoria" id="casual" />
-                <label htmlFor="casual">casual</label>
+                <input type="checkbox" name="casual" id="casual" checked={marcado.casual} onChange={Verificado} />
+                <label htmlFor="casual">{categorias[1].nome}</label>
                 <br />
-                <input type="checkbox" name="categoria" id="utilitario" />
-                <label htmlFor="utilitario">utilitario</label>
+                <input type="checkbox" name="utilitario" id="utilitario" checked={marcado.utilitario} onChange={Verificado}/>
+                <label htmlFor="utilitario">{categorias[2].nome}</label>
                 <br />
-                <input type="checkbox" name="categoria" id="corrida" />
-                <label htmlFor="corrida">corrida</label>
+                <input type="checkbox" name="corrida" id="corrida" checked={marcado.corrida} onChange={Verificado} />
+                <label htmlFor="corrida">{categorias[3].nome}</label>
             </section>
             <h3>Gênero</h3>
             <section className="genero">
-                <input type="checkbox" name="genero" id="masculino" />
-                <label htmlFor="">masculino</label>
+                <input type="checkbox" name="masculino" id="masculino" checked={marcado.masculino} onChange={Verificado} />
+                <label htmlFor="">{genero[0].valor}</label>
                 <br />
-                <input type="checkbox" name="genero" id="feminino" />
-                <label htmlFor="">feminino</label>
+                <input type="checkbox" name="feminino" id="feminino" checked={marcado.feminino} onChange={Verificado} />
+                <label htmlFor="">{genero[1].valor}</label>
                 <br />
-                <input type="checkbox" name="genero" id="unissex" />
-                <label htmlFor="">unissex</label>
+                <input type="checkbox" name="unissex" id="unissex" checked={marcado.unissex} onChange={Verificado} />
+                <label htmlFor="">{genero[2].valor}</label>
             </section>
             <section className="condicao">
                 <h3>Estado</h3>
-                <input type="radio" name="condicao" id="novo" />
-                <label htmlFor="novo">novo</label>
+                <input type="radio" name="novo" id="novo" checked={marcado.novo} onChange={Verificado} />
+                <label htmlFor="novo">{condicao[0].estado}</label>
                 <br />
-                <input type="radio" name="condicao" id="usado" />
-                <label htmlFor="usado">usado</label>
+                <input type="radio" name="usado" id="usado" checked={marcado.usado} onChange={Verificado} />
+                <label htmlFor="usado">{condicao[1].estado}</label>
             </section>
         </article>
         </>

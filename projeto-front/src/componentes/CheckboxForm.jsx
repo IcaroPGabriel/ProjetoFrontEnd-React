@@ -6,7 +6,6 @@ const CheckboxForm = () => {
     
     const[valueCheckBox,SetValueCheckBox] = useState({
         adidas: false,
-        nike: false
     })
 
     function MarcarCaixa(props) {

@@ -22,9 +22,7 @@ function App() {
       <article>
         <h2>Realizando testes</h2>
         <FilterGroup/>
-        <div>
-          <CheckboxForm/>
-        </div>
+        
         
       </article>
     </>
