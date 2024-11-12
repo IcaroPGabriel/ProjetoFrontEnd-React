@@ -1,0 +1,75 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.footerGeral {
+    color: #ffffff;
+    background-color: #1f1f1f;
+    padding: 58px 90px 26px 90px;
+    top: 3290px;
+}
+
+.container {
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.insta {
+    margin: 0 30px;
+}
+
+.social {
+    display: flex;
+    padding-top: 20px;
+}
+
+.secaoInfo {}
+
+.secaoCategorias {}
+
+.secaoContato {
+    width: 233px;
+}
+
+[class^="_secao"] {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    line-height: 35px;
+}
+
+.endereco {
+    line-height: normal;
+}
+
+.copy {
+    border-top: 1px solid #ffffff6b;
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    padding-top: 26px;
+}
+
+.lorem {
+    width: 307px;
+}
+
+.texto {
+    margin: 30px 0;
+}
+
+.cabecalho {
+    font-size: 18px;
+    font-weight: 500;
+
+}

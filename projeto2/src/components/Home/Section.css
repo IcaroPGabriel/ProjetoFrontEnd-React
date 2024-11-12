@@ -1,0 +1,60 @@
+.corDeFundoBranco {
+    background-color: #F5F5F5;
+}
+
+.corBotaoRosa {
+    background-color: #C92071;
+}
+
+.icone {
+    width: 70px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+}
+
+.cardSapatoComp3 {
+    background-color: white;
+    padding-bottom: 80px;
+    padding-top: 80px;
+
+
+}
+
+.corFontePreço {
+    color: lightgray;
+}
+
+.fundoCard {
+    background-color: #D7E3F1;
+}
+
+.desconto {
+    background-color: #E7FF84;
+    padding: 10px 0px 10px 5px;
+    width: 70px;
+    border-radius: 30px;
+}
+
+.corFonteBotaoComp1 {
+    color: #C92071;
+}
+
+.gradiente {
+    background-image: linear-gradient(to bottom, #4400ff38, rgba(255, 255, 255, 0.31));
+    border-radius: 400px 400px 0px 0px;
+    padding-top: 40px;
+    margin-bottom: 100px;
+}
+
+.corBotaoRosa {
+    background-color: #C92071;
+}
+
+.corFonteRosa {
+    color: #C92071;
+}
+
+.corDeFundoComp4 {
+    background-color: white;
+    padding-top: 50px;
+}
