@@ -9,10 +9,6 @@ function App() {
     <>
       <AppRoutes/>
       
-
-
-      
-      
     </>
   )
 }

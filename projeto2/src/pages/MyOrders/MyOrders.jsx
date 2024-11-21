@@ -1,16 +1,15 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
-
-function ProductViewPage(){
-    return(
+function MyOrders () {
+    return (
         <>
-           <Header />
+            <Header />
 
-           <Footer />
-
+            <Footer />
+        
         </>
     )
-}
+};
 
-export default ProductViewPage;
+export default MyOrders;

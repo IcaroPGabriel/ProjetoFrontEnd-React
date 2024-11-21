@@ -2,6 +2,8 @@ import styles from './Header.module.css';
 import Logo from '../Logo/Logo'
 import BuyBox from '../BuyBox/BuyBox'
 import { Link } from 'react-router-dom';
+import MenuAtiv from './MenuAtiv';
+
 
 
 function Header() {
@@ -40,14 +42,16 @@ function Header() {
                 </div>
             </article>
 
-            <nav className={styles.menuNavegacao}>
+            <MenuAtiv />
+            
+           {/* <nav className={styles.menuNavegacao}>
                 <ul className={styles.listas}>
                     <li><Link to='/' className={styles.menuAtivo}>Home</Link></li>
                     <li><Link to='/ProductListingPage'>Produtos</Link></li>
                     <li><Link to='/ProductViewPage'>Categorias</Link></li>
                     <li><Link to='/'>Meus Pedidos</Link></li>
                 </ul>
-            </nav>
+            </nav>  */}
             </div>
         </>
     );

@@ -100,6 +100,15 @@ function FilterGroup() {
                             <input type="radio" name="usado" id="usado" checked={marcado.usado} onChange={Verificado} />{condicao[1].estado}
                         </section>
                     </article>
+                    <div className="col col-2 mt-5">
+                    <label for="cargo">Cargo de tecnologia:</label>
+                    <select name="cargo" id="cargos">
+                        <option value="">-- Selecione --</option>
+                        <option value="pessoa desenvolvedora">Pessoa Desenvolvedora</option>
+                        <option value="programador web">Programador web</option>
+                        <option value="arquiteto de redes">Arquiteto de redes</option>
+                    </select>
+                    </div>
                     <div className="col col-10 mt-4">
                         <ProductList/>
                     </div>

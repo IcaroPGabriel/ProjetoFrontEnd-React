@@ -48,41 +48,6 @@
 }
 
 
-.menuNavegacao{
-    margin-top: 50px;  
-}
-
-
-.listas {
-   display: flex;
-   flex-direction: row;
-   gap: 30px;
-   list-style: none;
-   padding: 0;
-   margin: 0;
-
-}
-
-
-.listas li a{
-    text-decoration: none;
-    color: #515151;
-}
-
-.listas li a:hover{
-    text-decoration: none;
-    color: #C92071;
-    font-weight: bold;
-}
-
-
-.listas li a.menuAtivo  {
-    color: #C92071;
-    font-weight: bold;
-    border-bottom: solid 2px #C92071;
-    
-}
-
 .botaoRosa{
     background-color: #C92071;
     color: white;
@@ -104,12 +69,4 @@
 .botaoRosa:active {
     outline: none;
     box-shadow: none;
-}
-
-li .selected {
-    color: #C92071;
-    font-weight: bold;
-    border-bottom: solid 2px #C92071;
-
-
 }

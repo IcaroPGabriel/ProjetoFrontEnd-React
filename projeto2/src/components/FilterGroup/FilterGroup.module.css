@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: inter;
+    font-size: 15px;
+}
+
+
+
+.caixaFiltro {
+    background-color: #ffffff;
+    height: 800px;
+
+    margin-left: 100px;
+   
+
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.listasFiltro {
+    display: flex;
+    flex-direction: column;
+    /* text-align: start; */
+    color: #474747;
+    gap: 10px;
+
+}
+
+.tituloh1{
+    color: #474747;
+    font-size: 20px;
+}
+
+.tituloh3{
+    color: #474747;
+    font-size: 20px;
+}
+
+
+.filtroPosition{
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+
+}
+
+.filtroGeral{
+    padding: 0px;
+    
+}
+/* .teste {
+    background-color: red;
+    color: red;
+} */
+
+.cardPosition {
+    margin-top: 0px;
+    padding: 0px;
+}

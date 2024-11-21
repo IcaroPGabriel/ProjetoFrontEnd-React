@@ -1,0 +1,34 @@
+/* MenuAtiv.module.css */
+.menuNavegacao {
+    margin-top: 30px;
+    margin-bottom: 25px;  
+}
+
+.listas {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.listas li a {
+    text-decoration: none;
+
+}
+
+.listas li a:hover{
+    text-decoration: none;
+    color: #C92071;
+    font-weight: bold;
+}
+
+.menuNaoAtivo {
+    color: #515151;
+}
+
+.menuAtivo {
+    color: #C92071;
+    font-weight: bold;
+    border-bottom: solid 2px #C92071;
+}

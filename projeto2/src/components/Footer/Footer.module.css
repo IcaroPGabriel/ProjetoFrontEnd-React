@@ -2,6 +2,13 @@ p {
     margin: 0;
     padding: 0;
 }
+.linkFooter {
+    text-decoration: none;
+    color: #ffffff;
+}
+li a:hover{
+    color: #C92071; 
+}
 
 .footerGeral {
     color: #ffffff;
