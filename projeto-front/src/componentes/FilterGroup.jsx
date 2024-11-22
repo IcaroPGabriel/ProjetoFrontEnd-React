@@ -95,9 +95,9 @@ function FilterGroup() {
                         <hr />
                         <section className="condicao">
                         <h5>Estado</h5>
-                            <input type="radio" name="novo" id="novo" checked={marcado.novo} onChange={Verificado} />{condicao[0].estado}
+                            <input type="radio" name="radio" id="radio" checked={marcado.novo} onChange={Verificado} />{condicao[0].estado}
                             <br />
-                            <input type="radio" name="usado" id="usado" checked={marcado.usado} onChange={Verificado} />{condicao[1].estado}
+                            <input type="radio" name="radio" id="radio" checked={marcado.usado} onChange={Verificado} />{condicao[1].estado}
                         </section>
                     </article>
                     <div className="col col-2 mt-5">
